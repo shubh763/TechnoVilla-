@@ -1,0 +1,124 @@
+.about{
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.about-left{
+    flex-basis: 40%;
+    position: relative;
+}
+
+.about-right{
+    flex-basis: 56%;
+}
+
+.about-img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.play-icon{
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.about h3{
+    font-weight: 600;
+    font-weight: 16px;
+    color: #212EA0;
+}
+
+.about h2{
+    font-size: 35px;
+    margin: 10px 0;
+    color: #000F38;
+    max-width: 400px;
+}
+
+.about p{
+    margin-bottom: 15px;
+    color: #676767;
+}
+
+.about-skills{
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+}
+
+.about-skill {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between text and progress bar */
+    position: relative;
+}
+
+.about-skill p {
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+    flex-basis: 150px; /* Fixed width for text alignment */
+}
+
+.about-skill hr {
+    flex-grow: 1; /* Progress bar takes the remaining space */
+    border: none;
+    outline: none;
+    height: 8px; /* Thickness of the progress bar */
+    border-radius: 50px;
+    background: gray; /* Default bar color */
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+.about-skill hr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 65%; /* Initially fill 65% */
+    background: #212EA0; /* Progress bar fill color */
+    border-radius: inherit;
+    transition: width 0.3s ease-in-out;
+}
+
+.about-skill:hover hr {
+    transform: scale(1.1); /* Zooms the progress bar */
+}
+
+.about-skill:hover hr::before {
+    width: 65%; /* Ensures it shows the correct fill percentage */
+}
+
+/* Optional: Percentage display on hover */
+.about-skill:hover::after {
+    content: "65%";
+    position: absolute;
+    top: -25px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #212EA0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+@media (max-width: 800px){
+    .about{
+        flex-direction: column;
+    }
+    .about-left{
+        flex-basis: 100%;
+        margin: 20px;
+        order: 2;
+    }
+    .about-right{
+        flex-basis: 100%;
+    }
+}

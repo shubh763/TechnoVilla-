@@ -1,0 +1,40 @@
+@import "/node_modules/slick-carousel/slick/slick.css";
+@import "/node_modules/slick-carousel/slick/slick-theme.css";
+
+.campus {
+  margin: 80px auto;
+  width: 90%;
+  text-align: center;
+}
+
+.gallery img {
+  width: 18rem;
+  height: auto;
+  border-radius: 8px;
+  margin: auto; /* Center the image */
+}
+
+/* Center dots below the slider */
+.slick-dots {
+  bottom: -20px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black; /* Arrow color */
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .gallery img {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery img {
+    width: 16rem;
+  }
+}
